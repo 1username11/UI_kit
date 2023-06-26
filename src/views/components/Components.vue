@@ -1,3 +1,3 @@
 <template>
-  <div>sign up</div>
+  Components
 </template>

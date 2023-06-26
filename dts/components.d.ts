@@ -22,7 +22,6 @@ declare module '@vue/runtime-core' {
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ElTable: typeof import('element-plus/es')['ElTable']
     ElTableColumn: typeof import('element-plus/es')['ElTableColumn']
-    ExampleViewComponent: typeof import('./../src/views/example-view/components/ExampleViewComponent.vue')['default']
     FF: typeof import('./../src/components/FF.vue')['default']
     IconCar: typeof import('~icons/icon/car')['default']
     IconCart: typeof import('~icons/icon/cart')['default']

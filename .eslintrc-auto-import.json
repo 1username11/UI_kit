@@ -11,7 +11,6 @@
     "VNode": true,
     "acceptHMRUpdate": true,
     "asyncComputed": true,
-    "authService": true,
     "autoResetRef": true,
     "computed": true,
     "computedAsync": true,

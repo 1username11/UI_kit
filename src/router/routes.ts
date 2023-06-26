@@ -2,19 +2,23 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import { routeNames } from './route-names'
 
-import { authRoutes } from '@/views/auth/auth.routes'
-import { exampleViewRoutes } from '@/views/example-view/example-view.routes'
-
 import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import { typographyRoutes } from '@/views/typography/typography.routes'
+import { colorsRoutes } from '@/views/colors/colors.routes'
+import { iconsRoutes } from '@/views/icons/icons.routes'
+import { componentsRoutes } from '@/views/components/components.routes'
 
 const defaultLayoutRoutes: RouteRecordRaw = {
   path: '/',
   name: routeNames.rootPage,
-  redirect: { name: routeNames.exampleView },
+  redirect: { name: routeNames.typography },
   component: DefaultLayout,
   children: [
     // list of views that use default layout
-    ...exampleViewRoutes
+    ...typographyRoutes,
+    ...colorsRoutes,
+    ...iconsRoutes,
+    ...componentsRoutes
   ]
 }
 
@@ -24,14 +28,7 @@ const routes: Array<RouteRecordRaw> = [
     redirect: '/'
   },
 
-  authRoutes,
-  defaultLayoutRoutes,
-  {
-    path: '/react-vs-vue',
-    component: DefaultLayout,
-    children: [{ path: '', name: 'react-vs-vue', component: () => import('@/views/react-vs-vue/index.vue') }]
-
-  }
+  defaultLayoutRoutes
 ]
 
 export {
