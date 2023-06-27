@@ -1,23 +1,23 @@
 <template>
-  <div class="font-section text-dark mt-16 section">
-    <span>UI kit/ </span>
-    <span class="capitalize text-greenLight">{{ currentRoute }}</span>
-  </div>
-
-  <div v-for="(contentItem) in content" :key="contentItem.title">
+  <div
+    v-for="(contentItem) in content"
+    :key="contentItem.title"
+  >
     <div class="flex justify-between mt-8">
-      <div v-for="(subContent, idx) in contentItem.content" :key="idx">
+      <div
+        v-for="(subContent, idx) in contentItem.content"
+        :key="idx"
+      >
         <p :class="getParagraphClasses(contentItem, idx)">
           {{ contentItem.title }}
         </p>
-        <p class="font-main text-xs text-subtitleGray">{{ subContent }}</p>
+        <p class="font-main text-xs text-darkGray">{{ subContent }}</p>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-const { currentRoute } = storeToRefs(useGeneralStore())
 
 const content = ref<IContent[]>([
   {
@@ -69,10 +69,9 @@ const content = ref<IContent[]>([
 const getParagraphClasses = (contentItem: IContent, idx: number) => {
   return [
     ['font-bold', 'font-medium', ''][idx],
-    contentItem.title === 'Headlines' ? 'font-headlines headline mt-8' : '',
+    contentItem.title === 'Headlines' ? 'font-headlines headline mt-7' : '',
     contentItem.title === 'Subhead' ? 'text-2xl' : '',
     contentItem.title === 'Paragraph Header' ? 'text-lg' : '',
-    (contentItem.title === 'Body 1' || contentItem.title === 'Secondary content') ? 'text-base' : '',
     contentItem.title === 'Navigation' ? 'text-sm font-semibold' : '',
     contentItem.title === 'Buttons' ? 'text-sm font-bold' : ''
   ]
@@ -80,12 +79,6 @@ const getParagraphClasses = (contentItem: IContent, idx: number) => {
 </script>
 
 <style lang="scss">
-.section {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 40px;
-}
-
 .headline {
   font-weight: 700;
   line-height: 120%;

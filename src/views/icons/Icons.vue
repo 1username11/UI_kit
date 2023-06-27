@@ -1,3 +1,7 @@
 <template>
-  Icons
+  srg
 </template>
+
+<script lang="ts" setup>
+
+</script>
