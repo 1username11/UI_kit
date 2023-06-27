@@ -1,5 +1,5 @@
 <template>
-  <div class="font-section text-dark mt-16 section">
+  <div class="font-section text-dark mt-16 text-section">
     <span>UI kit/ </span>
     <span class="capitalize text-greenLight">{{ currentRoute }}</span>
   </div>
@@ -7,10 +7,14 @@
   <div v-for="(contentItem) in content" :key="contentItem.title">
     <div class="flex justify-between mt-8">
       <div v-for="(subContent, idx) in contentItem.content" :key="idx">
-        <p :class="getParagraphClasses(contentItem, idx)">
+        <p
+          :class="[textClasses[contentItem.title as string],
+                   !contentItem.exclude ? ['font-bold', 'font-medium', ''][idx] : ''
+          ]"
+        >
           {{ contentItem.title }}
         </p>
-        <p class="font-main text-xs text-subtitleGray">{{ subContent }}</p>
+        <p class="font-manrope text-subtitle text-subtitleGray">{{ subContent }}</p>
       </div>
     </div>
   </div>
@@ -58,41 +62,23 @@ const content = ref<IContent[]>([
   },
   {
     title: 'Navigation',
-    content: ['Manrope Semibold, 14 Size, 150% Line']
+    content: ['Manrope Semibold, 14 Size, 150% Line'],
+    exclude: true
   },
   {
     title: 'Buttons',
-    content: ['Manrope Bold , 14 Size, 150% Line']
+    content: ['Manrope Bold , 14 Size, 150% Line'],
+    exclude: true
   }
 ])
 
-const getParagraphClasses = (contentItem: IContent, idx: number) => {
-  return [
-    ['font-bold', 'font-medium', ''][idx],
-    contentItem.title === 'Headlines' ? 'font-headlines headline mt-8' : '',
-    contentItem.title === 'Subhead' ? 'text-2xl' : '',
-    contentItem.title === 'Paragraph Header' ? 'text-lg' : '',
-    (contentItem.title === 'Body 1' || contentItem.title === 'Secondary content') ? 'text-base' : '',
-    contentItem.title === 'Navigation' ? 'text-sm font-semibold' : '',
-    contentItem.title === 'Buttons' ? 'text-sm font-bold' : ''
-  ]
+const textClasses: TIndexedObject<string> = {
+  Headlines: 'font-headlines text-headlines',
+  Subhead: 'text-subheads',
+  'Paragraph Header': 'text-paragraphHeader',
+  'Body 1': 'text-body',
+  'Secondary content': 'text-secondaryContent',
+  Navigation: 'text-navigation',
+  Buttons: 'text-buttons'
 }
 </script>
-
-<style lang="scss">
-.section {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 40px;
-}
-
-.headline {
-  font-weight: 700;
-  line-height: 120%;
-  font-size: 28px;
-}
-
-.font-main {
-  font-family: 'Manrope', sans-serif;
-}
-</style>
