@@ -9,6 +9,12 @@ module.exports = {
   ],
   theme: {
     colors,
+    fontFamily: {
+      main: ['Roboto', 'sans-serif'],
+      section: ['Source Sans 3', 'sans-serif'],
+      headlines: ['Lora', 'serif'],
+      manrope: ['Manrope', 'sans-serif']
+    },
     extend: {}
   },
   plugins: []

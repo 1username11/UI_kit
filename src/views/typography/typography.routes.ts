@@ -1,13 +1,13 @@
 import type { RouteRecordRaw } from 'vue-router'
 
 export const typographyRouteNames = {
-  typography: 'typography'
+  fonts: 'fonts'
 }
 
 export const typographyRoutes: Array<RouteRecordRaw> = [
   {
-    path: 'typography',
-    name: typographyRouteNames.typography,
-    component: () => import('./Typography.vue')
+    path: 'fonts',
+    name: typographyRouteNames.fonts,
+    component: () => import('./Fonts.vue')
   }
 ]
