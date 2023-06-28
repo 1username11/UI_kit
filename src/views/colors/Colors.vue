@@ -24,19 +24,36 @@
     </div>
   </div>
 
-  <div class="flex">
+  <div class="mt-4">
     <div
-      v-for="(opacity, index) in opacities"
-      :key="index"
-      :class="[
-        `${squaresColors['#024242']}`,
-        `bg-opacity-${opacity}`,
-        'w-[124px]',
-        'h-[115px]',
-        'rounded-[20px]',
-        'mt-2'
-      ]"
-    />
+      v-for="(colorsGroup, idx) in colorsGroups"
+      :key="idx"
+      class="flex mt-4 space-x-4"
+    >
+      <div
+        v-for="color in colorsGroup"
+        :key="color"
+        class="flex"
+      >
+        <div
+          v-for="(opacity, index) in color !== '#889EA6'
+            ? opacities.filter((item) => item * 10 % 2 === 0 && item >= 0.2)
+            : opacities"
+          :key="index"
+          class="h-20 flex items-center justify-center"
+          :class="[
+            `${squaresColors[color as string]}`,
+            opacity === 1 ? 'w-40' : 'w-[44px]',
+            opacity > 0.5 ? 'text-white' : 'text-gray-950',
+          ]"
+          :style="[`opacity: ${opacity}`, ]"
+        >
+          <p class="text-class">
+            {{ opacity === 1 ? '#024242' : `${opacity * 100}%` }}
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -64,7 +81,14 @@ const squaresColors = ref<TIndexedObject<string>>({
   '#DCDDDE': 'bg-lightGray'
 })
 
-const opacities = ref([100, 80, 60, 40, 20, 15, 10, 5])
+const colorsGroups = ref([
+  ['#024242', '#A5CF4C'],
+  ['#437E60', '#D99F59'],
+  ['#4495D1', '#DC5973'],
+  ['#889EA6']
+])
+
+const opacities = ref([1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.05])
 </script>
 
 <style lang="scss">

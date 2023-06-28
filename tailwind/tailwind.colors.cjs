@@ -3,6 +3,7 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   gray: colors.gray,
   red: colors.red,
+  black: colors.black,
   dark: '#2A2E33',
 
   darkGreen: '#024242',
