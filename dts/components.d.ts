@@ -45,6 +45,7 @@ declare module '@vue/runtime-core' {
     NavigationIcons: typeof import('./../src/components/NavigationIcons.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SectionHeader: typeof import('./../src/components/SectionHeader.vue')['default']
   }
   export interface ComponentCustomProperties {
     vLoading: typeof import('element-plus/es')['ElLoadingDirective']
