@@ -5,7 +5,14 @@
     'primary': (
       'base': colors.$primary, // todo: this MUST be a valid 6-digit HEX color in order to make it correctly work
     ),
-  )
+  ),
+
+  $menu:(
+    'bg-color': colors.$dark-green,
+    'text-color': colors.$white,
+    'hover-bg-color': colors.$light-green,
+    'active-color': colors.$green,
+  )  
 );
 
 @use "element-plus/theme-chalk/src/base";
@@ -22,3 +29,5 @@
 @use "element-plus/theme-chalk/src/card";
 @use "element-plus/theme-chalk/src/table";
 @use "element-plus/theme-chalk/src/switch";
+@use "element-plus/theme-chalk/src/menu";
+@use "element-plus/theme-chalk/src/radio";
