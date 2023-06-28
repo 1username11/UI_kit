@@ -16,7 +16,7 @@
         <div class="flex flex-col items-center">
           <div
             class="w-[124px] h-[115px] rounded-[20px]"
-            :class="[squaresColors[colorSquare as string], colorSquare === '#ffffff' ? 'white-square-shadow' : '']"
+            :class="[squaresColors[colorSquare as string]]"
           />
           <div class="mt-2">{{ colorSquare }}</div>
         </div>
@@ -44,13 +44,11 @@
           :class="[
             `${squaresColors[color as string]}`,
             opacity === 1 ? 'w-40' : 'w-[44px]',
-            opacity > 0.5 ? 'text-white' : 'text-gray-950',
+            opacity > 0.5 ? 'text-white/100' : 'text-gray-950/100',
           ]"
           :style="[`opacity: ${opacity}`, ]"
         >
-          <p class="text-class">
-            {{ opacity === 1 ? '#024242' : `${opacity * 100}%` }}
-          </p>
+          {{ opacity === 1 ? '#024242' : `${opacity * 100}%` }}
         </div>
       </div>
     </div>
@@ -74,7 +72,7 @@ const squaresColors = ref<TIndexedObject<string>>({
   '#A5CF4C': 'bg-green',
   '#D99F59': 'bg-orange',
   '#889EA6': 'bg-darkGray',
-  '#ffffff': 'bg-white',
+  '#ffffff': 'bg-white white-square-shadow',
   '#437E60': 'bg-lightGreen',
   '#4495D1': 'bg-blue',
   '#DC5973': 'bg-cherry',
