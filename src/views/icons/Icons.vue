@@ -1,11 +1,12 @@
 <template>
   <div
+  class="mt-8"
     v-for="iconsContentItem in iconsContent"
     :key="iconsContentItem.title"
   >
-    <h2 class="text-2xl font-bold">{{ iconsContentItem.title }}</h2>
+    <h2 class="text-2xl font-bold mb-4">{{ iconsContentItem.title }}</h2>
 
-    <div class="flex gap-4">
+    <div class="flex gap-4 ">
       <div
         v-for="(icon, idx) in iconsContentItem.icons"
         :key="idx"
