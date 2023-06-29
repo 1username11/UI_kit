@@ -2,7 +2,6 @@
   <button
     :disabled="disabled"
     :class="[
-      'button',
       types[type],
       sizes[size]
     ]"
