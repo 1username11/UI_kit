@@ -33,6 +33,14 @@
       </CustomButton>
     </div>
   </div>
+
+  <div class="flex space-x-8 mt-8">
+    <div class="flex items-center justify-center font-main font-medium shadow-md rounded-md w-40 h-20">
+      Inputs
+    </div>
+
+    <el-input />
+  </div>
 </template>
 
 <script lang="ts" setup>
