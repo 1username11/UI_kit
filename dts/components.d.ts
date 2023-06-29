@@ -10,8 +10,10 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     AuthButton: typeof import('./../src/views/auth/components/AuthButton.vue')['default']
+    Button: typeof import('./../src/views/components/components/Button.vue')['default']
     Components: typeof import('./../src/views/components/Components.vue')['default']
     Compute: typeof import('./../src/components/Compute.vue')['default']
+    CustomButton: typeof import('./../src/views/components/components/CustomButton.vue')['default']
     ElButton: typeof import('element-plus/es')['ElButton']
     ElCard: typeof import('element-plus/es')['ElCard']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
@@ -39,6 +41,7 @@ declare module '@vue/runtime-core' {
     IconCart: typeof import('~icons/icon/cart')['default']
     IconColor: typeof import('~icons/icon/color')['default']
     IconComponents: typeof import('~icons/icon/components')['default']
+    IconGroup: typeof import('~icons/icon/group')['default']
     IconIcons: typeof import('~icons/icon/icons')['default']
     IconTypography: typeof import('~icons/icon/typography')['default']
     Navigation: typeof import('./../src/components/Navigation.vue')['default']
