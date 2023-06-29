@@ -14,7 +14,7 @@
 }
 
 .el-form-item.is-error .el-input__wrapper{
-    border-color: var(--el-color-danger);
+    border-color: var(--el-color-danger) !important;
     box-shadow: none;
     background-color: #fff !important;
 }
@@ -24,3 +24,9 @@
         color: var(--el-color-danger);
     }
 }
+
+.el-form-item__error{
+    @apply mt-1;
+}
+
+

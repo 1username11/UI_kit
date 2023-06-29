@@ -1,0 +1,42 @@
+@use "element-plus/theme-chalk/src/select";
+
+.el-scrollbar__bar {
+  display: none !important;
+  :first-child{
+    display: none !important;
+  }
+  .is-vertical{
+    display: none !important;
+  }
+}
+
+.el-scrollbar__thumb{
+  display: none !important;
+}
+
+.el-scrollbar__bar {
+  display: none !important;
+}
+.el-scrollbar__wrap{
+  overflow: auto !important;
+}
+.el-select .el-input__wrapper.is-focus .el-input__wrapper{
+  box-shadow: none !important;
+}
+
+.el-select{
+  &:hover:not(.el-select--disabled) .el-input__wrapper{
+    background: #F5F5F6;
+    box-shadow: 0px 12px 16px -16px rgba(15, 15, 15, 0.16);
+  }
+
+  .el-input__wrapper.is-focus{
+    border: 1.5px solid var(--primary-colors-dark-green, #024242);
+    background: #FFF !important;
+    box-shadow: none !important;
+  }
+  &.el-select .el-input.is-focus .el-input__wrapper{
+    box-shadow: none !important;
+  }
+
+}
