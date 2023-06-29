@@ -1,0 +1,25 @@
+@use "element-plus/theme-chalk/src/checkbox";
+
+.el-checkbox {
+  &:hover {
+    .el-checkbox__inner {
+      border-color: #437E60 !important;
+    }
+  }
+
+}
+
+.el-checkbox__inner::after{
+  background-color: #437E60 !important;
+  width: 6px !important;
+  height: 11px !important;
+  left: 7px !important;
+  top: 2px !important;
+
+}
+
+.el-checkbox.el-checkbox--large .el-checkbox__inner {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+}

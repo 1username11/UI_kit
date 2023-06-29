@@ -1,19 +1,30 @@
 @use "../variables/colors";
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  $colors: (
-    'primary': (
-      'base': colors.$primary, // todo: this MUST be a valid 6-digit HEX color in order to make it correctly work
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ('base': colors.$primary, // todo: this MUST be a valid 6-digit HEX color in order to make it correctly work
     ),
   ),
 
-  $menu:(
-    'bg-color': colors.$dark-green,
+  $menu: ('bg-color': colors.$dark-green,
     'text-color': colors.$white,
     'hover-bg-color': colors.$light-green,
     'active-color': colors.$green,
-  )
+  ),
+
+  $checkbox: ('checked-bg-color': colors.$light-green,
+    'checked-icon-color': colors.$white,
+    'checked-text-color': colors.$black,
+    'text-color': colors.$black,
+    'checked-input-border-color': transparent,
+  ),
+
+  $radio: ('text-color': colors.$black,
+    'input-height': 20px,
+    'input-width': 20px,
+    'input-bg-color': transparent,
+    'input-border': 1px solid,
+  ),
 );
+
 
 @use "element-plus/theme-chalk/src/base";
 @use "element-plus/theme-chalk/src/button";
@@ -27,8 +38,9 @@
 @use "element-plus/theme-chalk/src/table";
 @use "element-plus/theme-chalk/src/switch";
 @use "element-plus/theme-chalk/src/menu";
-@use "element-plus/theme-chalk/src/radio";
 
 @use"./input";
 @use"./form-item";
 @use"./select";
+@use"./checkbox";
+@use"./radio";

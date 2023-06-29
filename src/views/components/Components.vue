@@ -73,7 +73,7 @@
           size="large"
           clearable
           :suffix-icon="IconArrow"
-          :disabled="true"
+          :disabled="false"
         >
           <el-option
             v-for="item in options"
@@ -84,6 +84,26 @@
         </el-select>
       </el-form-item>
     </el-form>
+  </div>
+
+  <div class="flex space-x-8 mt-8">
+    <div class="element-subsection">
+      Controls
+    </div>
+
+    <div class="flex flex-col">
+      <p class="font-main font-medium">Checkboxes</p>
+      <el-checkbox v-model="checked1" label="Option 1" size="large" />
+      <el-checkbox v-model="checked2" label="Option 2" size="large" />
+    </div>
+
+    <div class="flex flex-col">
+      <p class="font-main font-medium">Radio</p>
+      <el-radio-group v-model="radio1" class="flex flex-col">
+        <el-radio label="1" size="large">Option 1</el-radio>
+        <el-radio label="2" size="large">Option 2</el-radio>
+      </el-radio-group>
+    </div>
   </div>
 </template>
 
@@ -154,6 +174,10 @@ const selectRules = ref({
     { required: true, message: 'Please select profession', trigger: 'change' }
   ]
 })
+
+const checked1 = ref(false)
+const checked2 = ref(false)
+const radio1 = ref('1')
 </script>
 
 <style scoped lang="scss">

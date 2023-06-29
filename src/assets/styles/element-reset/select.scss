@@ -1,5 +1,6 @@
 @use "element-plus/theme-chalk/src/select";
 
+
 .el-scrollbar__bar {
   display: none !important;
   :first-child{
@@ -11,20 +12,29 @@
 }
 
 .el-scrollbar__thumb{
-  display: none !important;
+  display: none;
 }
 
 .el-scrollbar__bar {
-  display: none !important;
+  display: none;
 }
 .el-scrollbar__wrap{
-  overflow: auto !important;
+  overflow: auto;
 }
 .el-select .el-input__wrapper.is-focus .el-input__wrapper{
-  box-shadow: none !important;
+  box-shadow: none;
 }
 
 .el-select{
+  .el-input__wrapper {
+    border: 1px solid#DCDDDE;
+    box-shadow: none;
+      &:hover{
+        background: #F5F5F6;
+        box-shadow: 0px 12px 16px -16px rgba(15, 15, 15, 0.16);
+      }
+  }
+
   &:hover:not(.el-select--disabled) .el-input__wrapper{
     background: #F5F5F6;
     box-shadow: 0px 12px 16px -16px rgba(15, 15, 15, 0.16);
