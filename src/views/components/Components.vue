@@ -8,11 +8,26 @@
         v-for="type in types"
         :key="type"
       >
-        <CustomButton :type="type" :disabled="false">
+        <CustomButton :type="type" :size="'big'" :disabled="false">
           {{ type }}
         </CustomButton>
       </div>
-      <CustomButton type="transparentSmall" :disabled="true">
+      <CustomButton type="transparent" :size="'big'" :disabled="true">
+        <IconGroup />
+        PDF
+      </CustomButton>
+    </div>
+
+    <div class="space-y-4">
+      <div
+        v-for="type in types"
+        :key="type"
+      >
+        <CustomButton :type="type" :size="'small'" :disabled="false">
+          {{ type }}
+        </CustomButton>
+      </div>
+      <CustomButton type="transparent" :size="'small'" :disabled="false">
         <IconGroup />
         PDF
       </CustomButton>
@@ -21,5 +36,5 @@
 </template>
 
 <script lang="ts" setup>
-const types: Array<'bigGreen'| 'smallGreen'| 'transparent'| 'underscored' | 'transparentSmall'> = ['bigGreen', 'smallGreen', 'transparent', 'underscored']
+const types = ref<Array<'green' | 'transparent' | 'underscored'>>(['green', 'transparent', 'underscored'])
 </script>
