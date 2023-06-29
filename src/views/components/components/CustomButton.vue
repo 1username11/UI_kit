@@ -1,6 +1,7 @@
 <template>
   <button
     :disabled="disabled"
+    class="transition duration-300 ease-in-out"
     :class="[
       types[type],
       sizes[size]
@@ -74,6 +75,7 @@ const types = ref({
     background-color: #E0E0E0;
     color: #9E9E9E;
     cursor: not-allowed;
+    fill: currentColor;
     border: none;
     @apply shadow-none;
   }
