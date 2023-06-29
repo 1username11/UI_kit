@@ -11,6 +11,7 @@
         type === 'transparentSmall' ? 'button--transparentSmall' : '',
       ]"
     >
+    
       <slot class="flex items-center justify-center gap-2" />
     </button>
   </div>
