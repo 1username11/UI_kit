@@ -67,7 +67,14 @@
       :rules="selectRules"
     >
       <el-form-item label="Profession" prop="profession">
-        <el-select v-model="selectForm.profession" placeholder="Select" size="large" clearable :suffix-icon="IconArrow">
+        <el-select
+          v-model="selectForm.profession"
+          placeholder="Select"
+          size="large"
+          clearable
+          :suffix-icon="IconArrow"
+          :disabled="true"
+        >
           <el-option
             v-for="item in options"
             :key="item.value"
@@ -81,7 +88,7 @@
 </template>
 
 <script lang="ts" setup>
-import IconArrow from '~icons/icon/IconArrow.vue'
+import IconArrow from '~icons/icon/arrow.svg'
 const types = ref<Array<'green' | 'transparent' | 'underscored'>>(['green', 'transparent', 'underscored'])
 
 const inputForm = reactive({
