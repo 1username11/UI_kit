@@ -7,4 +7,5 @@ type TCallbackFn<T extends unknown[] = [], R = void> = (...args: T) => R
 interface IContent {
   title: string
   content: Array<string>
+  exclude?: boolean
 }

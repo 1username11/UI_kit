@@ -15,6 +15,32 @@ module.exports = {
       headlines: ['Lora', 'serif'],
       manrope: ['Manrope', 'sans-serif']
     },
+    fontSize: {
+      base: ['16px', '24px'],
+      sm: ['14px', '24px'],
+      section: ['32px', {
+        lineHeight: '40px',
+        fontWeight: '600'
+      }],
+      subtitle: ['12px', '22px'],
+      headlines: ['28px', {
+        lineHeight: '33.6px',
+        fontWeight: '700'
+      }],
+      subheads: ['24px', '30px'],
+      paragraphHeader: ['18px', '28px'],
+      body: ['16px', '24px'],
+      secondaryContent: ['14px', '22px'],
+      navigation: ['14px', {
+        lineHeight: '22px',
+        fontWeight: '600'
+      }],
+      buttons: ['14px', {
+        lineHeight: '22px',
+        fontWeight: '700'
+      }]
+    },
+    extend: {}
     extend: {
       opacity: {
         5: '0.05',
