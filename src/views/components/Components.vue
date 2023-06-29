@@ -39,10 +39,32 @@
       Inputs
     </div>
 
-    <el-input />
+    <el-form
+      ref="form"
+      :model="sizeForm"
+      label-width="auto"
+      :label-position="'top'"
+      class="w-full"
+      :rules="rules"
+    >
+      <el-form-item label="Activity name" prop="name">
+        <el-input v-model="sizeForm.name" />
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 
 <script lang="ts" setup>
 const types = ref<Array<'green' | 'transparent' | 'underscored'>>(['green', 'transparent', 'underscored'])
+
+const sizeForm = reactive({
+  name: ''
+})
+
+const rules = ref({
+  name: [
+    { required: true, message: 'Please input Activity name', trigger: 'blur' },
+    { min: 3, max: 5, message: 'Length should be 3 to 5', trigger: 'blur' }
+  ]
+})
 </script>
