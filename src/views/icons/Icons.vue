@@ -60,11 +60,3 @@ const iconsContent = ref([
   }
 ])
 </script>
-
-<style lang="scss">
-.icon {
-  :hover {
-    fill: #A5CF4C;
-  }
-}
-</style>
