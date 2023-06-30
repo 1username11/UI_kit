@@ -11,7 +11,7 @@ module.exports = {
     colors,
     fontFamily: {
       main: ['Roboto', 'sans-serif'],
-      section: ['Source Sans 3', 'sans-serif'],
+      section: ['Source', 'sans-serif'],
       headlines: ['Lora', 'serif'],
       manrope: ['Manrope', 'sans-serif']
     },
@@ -62,6 +62,9 @@ module.exports = {
         90: '0.9',
         95: '0.95',
         100: '1'
+      },
+      boxShadow: {
+        'white-box': ' 0px 4px 14px 0px rgba(0, 0, 0, 0.15)'
       }
     }
   },

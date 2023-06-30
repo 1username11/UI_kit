@@ -4,7 +4,7 @@
     :key="colorSquaresContentItem.title"
     class="flex flex-col mt-9"
   >
-    <p class="capitalize font-section colors-title">
+    <p class="capitalize font-section text-headlines font-semibold">
       {{ `${colorSquaresContentItem.title} colors` }}
     </p>
 
@@ -18,6 +18,7 @@
             class="w-[124px] h-[115px] rounded-[20px]"
             :class="[squaresColors[colorSquare as string]]"
           />
+
           <div class="mt-2">{{ colorSquare }}</div>
         </div>
       </div>
@@ -56,7 +57,7 @@
 </template>
 
 <script lang="ts" setup>
-const colorSquaresContent = ref([
+const colorSquaresContent = [
   {
     title: 'Primary',
     content: ['#024242', '#A5CF4C', '#D99F59', '#889EA6', '#ffffff']
@@ -65,38 +66,26 @@ const colorSquaresContent = ref([
     title: 'Secondary',
     content: ['#437E60', '#4495D1', '#DC5973', '#DCDDDE']
   }
-])
+]
 
-const squaresColors = ref<TIndexedObject<string>>({
+const squaresColors: TIndexedObject<string> = {
   '#024242': 'bg-darkGreen',
   '#A5CF4C': 'bg-green',
   '#D99F59': 'bg-orange',
   '#889EA6': 'bg-darkGray',
-  '#ffffff': 'bg-white white-square-shadow',
+  '#ffffff': 'bg-white shadow-white-box',
   '#437E60': 'bg-lightGreen',
   '#4495D1': 'bg-blue',
   '#DC5973': 'bg-cherry',
   '#DCDDDE': 'bg-lightGray'
-})
+}
 
-const colorsGroups = ref([
+const colorsGroups = [
   ['#024242', '#A5CF4C'],
   ['#437E60', '#D99F59'],
   ['#4495D1', '#DC5973'],
   ['#889EA6']
-])
+]
 
-const opacities = ref([1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.05])
+const opacities = [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1, 0.05]
 </script>
-
-<style lang="scss">
-.colors-title{
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 35px;
-}
-
-.white-square-shadow{
-  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.15);
-}
-</style>
