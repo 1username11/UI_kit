@@ -40,7 +40,6 @@ module.exports = {
         fontWeight: '700'
       }]
     },
-    extend: {}
     extend: {
       opacity: {
         5: '0.05',
