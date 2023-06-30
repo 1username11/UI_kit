@@ -21,7 +21,6 @@
 </template>
 
 <script lang="ts" setup>
-const { currentRoute } = storeToRefs(useGeneralStore())
 
 const content = ref<IContent[]>([
   {
