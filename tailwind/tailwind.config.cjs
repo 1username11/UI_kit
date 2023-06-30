@@ -64,7 +64,17 @@ module.exports = {
         100: '1'
       },
       boxShadow: {
-        'white-box': ' 0px 4px 14px 0px rgba(0, 0, 0, 0.15)'
+        'white-box': ' 0px 4px 14px 0px rgba(0, 0, 0, 0.15)',
+        'components-subsection': '1px 1px 15px 0px rgba(0, 0, 0, 0.15)'
+      },
+      width: {
+        '70': '17.5rem',
+      },
+      height: {
+        '22': '5.5rem',
+      },
+      borderRadius: {
+        '2.5xl': '20px',
       }
     }
   },

@@ -182,12 +182,7 @@ const radio1 = ref('1')
 
 <style scoped lang="scss">
 .element-subsection{
-  width: 280px;
-  height: 88px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #FFF;
-  box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.15);
-  @apply flex items-center justify-center font-main font-medium;
+  @apply flex items-center justify-center font-main font-medium
+  shadow-components-subsection w-70 h-22 rounded-2.5xl bg-white;
 }
 </style>
