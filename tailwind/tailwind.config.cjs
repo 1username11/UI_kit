@@ -68,7 +68,7 @@ module.exports = {
         'components-subsection': '1px 1px 15px 0px rgba(0, 0, 0, 0.15)'
       },
       width: {
-        '70': '17.5rem',
+        '70': '280px',
       },
       height: {
         '22': '5.5rem',

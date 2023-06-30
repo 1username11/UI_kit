@@ -1,6 +1,9 @@
 <template>
   <div class="flex space-x-8 mt-8">
-    <div class="element-subsection">
+    <div
+      class="flex items-center justify-center font-main font-medium
+  shadow-components-subsection h-22 w-70 rounded-2.5xl bg-white"
+    >
       Buttons
     </div>
     <div class="space-y-4">
@@ -35,7 +38,10 @@
   </div>
 
   <div class="flex space-x-8 mt-8">
-    <div class="element-subsection">
+    <div
+      class="flex items-center justify-center font-main font-medium
+  shadow-components-subsection h-22 w-70 rounded-2.5xl bg-white"
+    >
       Inputs
     </div>
 
@@ -44,7 +50,6 @@
       :model="inputForm"
       label-width="auto"
       :label-position="'top'"
-      class="w-full"
       :rules="inputRules"
     >
       <el-form-item label="Activity name" prop="name">
@@ -54,7 +59,10 @@
   </div>
 
   <div class="flex space-x-8 mt-8">
-    <div class="element-subsection">
+    <div
+      class="flex items-center justify-center font-main font-medium
+  shadow-components-subsection h-22 w-70 rounded-2.5xl bg-white"
+    >
       Selectors
     </div>
 
@@ -63,7 +71,6 @@
       :model="selectForm"
       label-width="auto"
       :label-position="'top'"
-      class="w-full"
       :rules="selectRules"
     >
       <el-form-item label="Profession" prop="profession">
@@ -87,7 +94,10 @@
   </div>
 
   <div class="flex space-x-8 mt-8">
-    <div class="element-subsection">
+    <div
+      class="flex items-center justify-center font-main font-medium
+      shadow-components-subsection h-22 w-70 rounded-2.5xl bg-white"
+    >
       Controls
     </div>
 
@@ -179,10 +189,3 @@ const checked1 = ref(false)
 const checked2 = ref(false)
 const radio1 = ref('1')
 </script>
-
-<style scoped lang="scss">
-.element-subsection{
-  @apply flex items-center justify-center font-main font-medium
-  shadow-components-subsection w-70 h-22 rounded-2.5xl bg-white;
-}
-</style>
