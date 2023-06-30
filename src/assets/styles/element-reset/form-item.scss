@@ -1,32 +1,25 @@
 @use "element-plus/theme-chalk/src/form-item";
 
-.el-form-item.is-required:not(.is-no-asterisk).asterisk-left > .el-form-item__label:before, .el-form-item.is-required:not(.is-no-asterisk).asterisk-left > .el-form-item__label-wrap > .el-form-item__label:before{
-    content: none !important;
-    color: var(--el-color-danger);
-    margin-right: 4px;
+.el-form-item.is-required:not(.is-no-asterisk).asterisk-left>.el-form-item__label:before,
+.el-form-item.is-required:not(.is-no-asterisk).asterisk-left>.el-form-item__label-wrap>.el-form-item__label:before {
+    @apply hidden;
 }
 
-.el-form--default.el-form--label-top .el-form-item .el-form-item__label{
-    font-size: 12px;
-    font-family: Manrope;
-    font-weight: 500;
-    line-height: 155%;
+.el-form--default.el-form--label-top .el-form-item .el-form-item__label {
+    @apply capitalize text-formLabel font-manrope;
 }
 
-.el-form-item.is-error .el-input__wrapper{
-    border-color: var(--el-color-danger) !important;
-    box-shadow: none;
-    background-color: #fff !important;
+.el-form-item.is-error .el-input__wrapper {
+    @apply shadow-none;
+    @apply border border-danger bg-white #{!important};
 }
 
-.is-error{
-    :first-child{
-        color: var(--el-color-danger);
+.is-error {
+    :first-child {
+        @apply text-danger;
     }
 }
 
-.el-form-item__error{
+.el-form-item__error {
     @apply mt-1;
 }
-
-

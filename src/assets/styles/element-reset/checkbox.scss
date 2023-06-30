@@ -3,23 +3,16 @@
 .el-checkbox {
   &:hover {
     .el-checkbox__inner {
-      border-color: #437E60 !important;
+      @apply border border-lightGreen #{!important};
     }
   }
 
 }
 
 .el-checkbox__inner::after{
-  background-color: #437E60 !important;
-  width: 6px !important;
-  height: 11px !important;
-  left: 7px !important;
-  top: 2px !important;
-
+  @apply bg-lightGreen w-1.5 h-2.75 top-0.5 left-[7px] #{!important};
 }
 
 .el-checkbox.el-checkbox--large .el-checkbox__inner {
-  width: 24px;
-  height: 24px;
-  border-radius: 8px;
+  @apply w-6 h-6 rounded-lg;
 }

@@ -72,6 +72,7 @@
       label-width="auto"
       :label-position="'top'"
       :rules="selectRules"
+      :disabled="true"
     >
       <el-form-item label="Profession" prop="profession">
         <el-select

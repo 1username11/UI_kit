@@ -1,53 +1,36 @@
 @use "element-plus/theme-chalk/src/select";
 
-
 .el-scrollbar__bar {
-  display: none !important;
-  :first-child{
-    display: none !important;
-  }
-  .is-vertical{
-    display: none !important;
-  }
+  @apply hidden;
 }
 
-.el-scrollbar__thumb{
-  display: none;
-}
-
-.el-scrollbar__bar {
-  display: none;
-}
 .el-scrollbar__wrap{
-  overflow: auto;
+  @apply overflow-auto;
 }
+
 .el-select .el-input__wrapper.is-focus .el-input__wrapper{
-  box-shadow: none;
+  @apply shadow-none;
 }
 
 .el-select{
-  width: 310px;
+  @apply w-77.5;
   .el-input__wrapper {
-    border: 1px solid#DCDDDE;
-    box-shadow: none;
+    @apply border border-lightGray shadow-none;
       &:hover{
-        background: #F5F5F6;
-        box-shadow: 0px 12px 16px -16px rgba(15, 15, 15, 0.16);
+        @apply bg-ghostWhite shadow-inputs;
       }
   }
 
   &:hover:not(.el-select--disabled) .el-input__wrapper{
-    background: #F5F5F6;
-    box-shadow: 0px 12px 16px -16px rgba(15, 15, 15, 0.16);
+    @apply border border-lightGray shadow-inputs;
   }
 
   .el-input__wrapper.is-focus{
-    border: 1.5px solid var(--primary-colors-dark-green, #024242);
-    background: #FFF !important;
-    box-shadow: none !important;
+    @apply border-[1.5px] border-darkGreen;
+    @apply bg-white shadow-none #{!important};
   }
   &.el-select .el-input.is-focus .el-input__wrapper{
-    box-shadow: none !important;
+    @apply shadow-none #{!important};
   }
 
 }

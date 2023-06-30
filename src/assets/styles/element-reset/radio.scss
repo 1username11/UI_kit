@@ -3,31 +3,27 @@
 .el-radio {
   &:hover {
     .el-radio__inner {
-      border-color: #437E60 !important;
+      @apply border-lightGreen #{!important};
     }
   }
 
 }
 .el-radio__inner{
-  border-color: #889EA6 !important;
+  @apply border-darkGray #{!important};
 }
 
 .el-radio__label {
-  color: black !important;
+  @apply text-black #{!important};
 }
 
 .el-radio__input.is-checked .el-radio__inner{
-  border-color: #437E60 !important;
-  background-color: transparent !important;
+  @apply border-lightGreen bg-transparent #{!important};
 }
 
 .el-radio__inner::after{
-  background-color: #437E60 !important;
-  width: 10px !important;
-  height: 10px !important;
+  @apply bg-lightGreen w-2.5 h-2.5 #{!important};
 }
 
 .el-radio.el-radio--large .el-radio__inner{
-  width: 20px;
-  height: 20px;
+  @apply w-5 h-5;
 }
