@@ -45,6 +45,7 @@ declare module '@vue/runtime-core' {
     IconComponents: typeof import('~icons/icon/components')['default']
     IconGroup: typeof import('~icons/icon/group')['default']
     IconIcons: typeof import('~icons/icon/icons')['default']
+    IconLogo: typeof import('~icons/icon/logo')['default']
     IconProfesionalInfo: typeof import('~icons/icon/profesional-info')['default']
     IconProffesionalInfo: typeof import('~icons/icon/proffesional-info')['default']
     IconTypography: typeof import('~icons/icon/typography')['default']
