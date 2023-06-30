@@ -10,7 +10,7 @@
 }
 
 .el-checkbox__inner::after{
-  @apply bg-lightGreen w-1.5 h-2.75 top-0.5 left-[7px] #{!important};
+  @apply bg-lightGreen w-1.5 h-2.75 top-[3px] left-[8px] bg-transparent #{!important};
 }
 
 .el-checkbox.el-checkbox--large .el-checkbox__inner {

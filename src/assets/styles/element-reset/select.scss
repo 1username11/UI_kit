@@ -20,7 +20,7 @@
   .el-input__wrapper {
     @apply border border-lightGray shadow-none;
       &:hover{
-        @apply bg-ghostWhite shadow-inputs;
+        @apply bg-ghostWhite shadow-inputs transition-none;
       }
   }
 

@@ -1,13 +1,14 @@
 <template>
   <button
     :disabled="disabled"
-    class="transition duration-300 ease-in-out"
+    class="transition duration-300 ease-in-out flex items-center justify-center gap-2"
     :class="[
       types[type],
       sizes[size]
     ]"
   >
-    <slot />
+    <slot name="icon" />
+    <slot name="text" />
   </button>
 </template>
 
@@ -53,7 +54,7 @@ const types = ref({
 }
 
 .transparent-type-class{
-  @apply flex items-center justify-center rounded-md border border-darkGreen text-darkGreen fill-darkGray;
+  @apply rounded-md border border-darkGreen text-darkGreen fill-darkGray;
   &:hover{
     @apply shadow-button-hover-transparent;
   }

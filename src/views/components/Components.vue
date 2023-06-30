@@ -12,12 +12,18 @@
         :key="type"
       >
         <CustomButton :type="type" :size="'big'" :disabled="false">
-          {{ type }}
+          <template #text>
+            {{ type }}
+          </template>
         </CustomButton>
       </div>
       <CustomButton type="transparent" :size="'big'" :disabled="false">
-        <IconGroup />
-        PDF
+        <template #icon>
+          <IconGroup />
+        </template>
+        <template #text>
+          PDF
+        </template>
       </CustomButton>
     </div>
 
@@ -27,12 +33,18 @@
         :key="type"
       >
         <CustomButton :type="type" :size="'small'" :disabled="false">
-          {{ type }}
+          <template #text>
+            {{ type }}
+          </template>
         </CustomButton>
       </div>
       <CustomButton type="transparent" :size="'small'" :disabled="false">
-        <IconGroup />
-        <p>PDF</p>
+        <template #icon>
+          <IconGroup />
+        </template>
+        <template #text>
+          PDF
+        </template>
       </CustomButton>
     </div>
   </div>
