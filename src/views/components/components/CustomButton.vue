@@ -7,7 +7,7 @@
       sizes[size]
     ]"
   >
-    <slot class="flex items-center justify-center gap-2" />
+    <slot />
   </button>
 </template>
 
@@ -32,64 +32,46 @@ const types = ref({
 
 <style lang="scss">
 .big-size-class{
-  width: 150px;
-  height: 42px;
+  @apply w-37.5 h-10.5 px-4 py-2;
 }
 
 .small-size-class{
-  width: 114px;
-  height: 32px;
+  @apply w-28.5 h-8  px-2 py-0.5;
 }
 
 .green-type-class{
-  color: #FFFFFF;
-  background-color: #A5CF4C;
-  border-radius: 6px;
+  @apply text-white bg-green rounded-md;
   &:hover{
-    box-shadow: 0px 4px 8px 0px rgba(165, 207, 76, 0.5);
+    @apply shadow-button-hover-green;
   }
   &:active{
-    box-shadow: inset 0px 0px 3px 1px rgba(0, 0, 0, 0.4);
+    @apply shadow-button-active;
   }
   &:disabled{
-    background-color: #E0E0E0;
-    color: #9E9E9E;
-    cursor: not-allowed;
-    @apply shadow-none;
+    @apply shadow-none bg-disabled text-textDisabled cursor-not-allowed;
   }
 }
 
 .transparent-type-class{
-  border-radius: 6px;
-  border: 1px solid #024242;
+  @apply flex items-center justify-center rounded-md border border-darkGreen text-darkGreen fill-darkGray;
   &:hover{
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    @apply shadow-button-hover-transparent;
   }
   &:active{
-    background-color: #024242;
-    color: #FFFFFF;
-    fill: #FFFFFF;
-    @apply shadow-none;
+    @apply shadow-none fill-white text-white bg-darkGreen;
   }
   &:disabled{
-    background-color: #E0E0E0;
-    color: #9E9E9E;
-    cursor: not-allowed;
-    fill: currentColor;
-    border: none;
-    @apply shadow-none;
+    @apply shadow-none border-none fill-current cursor-not-allowed text-textDisabled bg-disabled;
   }
 }
 
 .underscored-type-class{
-  @apply underline;
-  color: #437E60;
+  @apply underline text-lightGreen;
   &:hover{
-    color: #024242;
+    @apply text-darkGreen
   }
   &:disabled{
-    cursor: not-allowed;
-    color: #9E9E9E;
+    @apply cursor-not-allowed text-textDisabled;
   }
 }
 </style>

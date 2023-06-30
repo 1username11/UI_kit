@@ -15,7 +15,7 @@
           {{ type }}
         </CustomButton>
       </div>
-      <CustomButton type="transparent" :size="'big'" :disabled="true">
+      <CustomButton type="transparent" :size="'big'" :disabled="false">
         <IconGroup />
         PDF
       </CustomButton>
@@ -32,7 +32,7 @@
       </div>
       <CustomButton type="transparent" :size="'small'" :disabled="false">
         <IconGroup />
-        PDF
+        <p>PDF</p>
       </CustomButton>
     </div>
   </div>
@@ -53,7 +53,7 @@
       :rules="inputRules"
     >
       <el-form-item label="Activity name" prop="name">
-        <el-input v-model="inputForm.name" />
+        <el-input v-model="inputForm.name" placeholder="Name" :disabled="false" />
       </el-form-item>
     </el-form>
   </div>
@@ -72,7 +72,7 @@
       label-width="auto"
       :label-position="'top'"
       :rules="selectRules"
-      :disabled="true"
+      :disabled="false"
     >
       <el-form-item label="Profession" prop="profession">
         <el-select

@@ -6,7 +6,7 @@
 }
 
 .el-form--default.el-form--label-top .el-form-item .el-form-item__label {
-    @apply capitalize text-formLabel font-manrope;
+    @apply capitalize text-formLabel font-manrope text-darkGreen;
 }
 
 .el-form-item.is-error .el-input__wrapper {

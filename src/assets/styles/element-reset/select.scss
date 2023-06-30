@@ -14,6 +14,9 @@
 
 .el-select{
   @apply w-77.5;
+  .el-input.is-disabled .el-input__wrapper{
+    @apply shadow-none border-none bg-disabled text-textDisabled #{!important};
+  }
   .el-input__wrapper {
     @apply border border-lightGray shadow-none;
       &:hover{
@@ -26,8 +29,7 @@
   }
 
   .el-input__wrapper.is-focus{
-    @apply border-[1.5px] border-darkGreen;
-    @apply bg-white shadow-none #{!important};
+    @apply border border-darkGreen bg-white shadow-none #{!important};
   }
   &.el-select .el-input.is-focus .el-input__wrapper{
     @apply shadow-none #{!important};

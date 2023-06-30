@@ -7,16 +7,20 @@
       &:hover{
         @apply bg-ghostWhite shadow-inputs;
       }
+      ::placeholder{
+        @apply text-darkGreen capitalize text-secondaryContent font-medium font-manrope #{!important};
+      }
   }
   .el-input__inner{
-    @apply capitalize text-black font-manrope text-formLabel #{!important};
+    @apply capitalize text-inputText font-manrope text-formLabel #{!important};
+
   }
   .el-input__wrapper.is-focus{
     @apply border-[1.5px] border-darkGreen;
     @apply bg-white shadow-none #{!important};
   }
-  .el-input.is-disabled .el-input__wrapper{
-    @apply shadow-none border-none bg-lightGray;
+  &.is-disabled .el-input__wrapper{
+  @apply shadow-none border-none bg-disabled text-textDisabled #{!important};
   }
 }
 
