@@ -40,6 +40,8 @@ declare module '@vue/runtime-core' {
     IconColor: typeof import('~icons/icon/color')['default']
     IconComponents: typeof import('~icons/icon/components')['default']
     IconIcons: typeof import('~icons/icon/icons')['default']
+    IconProfesionalInfo: typeof import('~icons/icon/profesional-info')['default']
+    IconProffesionalInfo: typeof import('~icons/icon/proffesional-info')['default']
     IconTypography: typeof import('~icons/icon/typography')['default']
     Navigation: typeof import('./../src/components/Navigation.vue')['default']
     NavigationIcons: typeof import('./../src/components/NavigationIcons.vue')['default']
