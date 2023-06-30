@@ -11,7 +11,7 @@ import { componentsRoutes } from '@/views/components/components.routes'
 const defaultLayoutRoutes: RouteRecordRaw = {
   path: '/',
   name: routeNames.rootPage,
-  redirect: { name: routeNames.typography },
+  redirect: { name: routeNames.fonts },
   component: DefaultLayout,
   children: [
     // list of views that use default layout
