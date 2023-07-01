@@ -16,7 +16,7 @@
 
   }
   .el-input__wrapper.is-focus{
-    @apply border-[1.5px] border-darkGreen;
+    @apply border border-darkGreen;
     @apply bg-white shadow-none #{!important};
   }
   &.is-disabled .el-input__wrapper{
