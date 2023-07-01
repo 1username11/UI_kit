@@ -1,34 +1,39 @@
 <template>
   <button
     :disabled="disabled"
-    class="transition duration-300 ease-in-out flex items-center justify-center gap-2"
+    class="transition duration-300 ease-in-out flex items-center justify-center"
     :class="[
       types[type],
       sizes[size]
     ]"
   >
-    <slot name="icon" />
-    <slot name="text" />
+    <slot />
   </button>
 </template>
 
 <script lang="ts" setup>
-defineProps<{
-  type: 'green' | 'transparent' | 'transparent' | 'underscored'
-  size: 'big' | 'small'
-  disabled: boolean
-}>()
+import type { EELButtonSize, EELButtonType } from '@/types/enums'
 
-const sizes = ref({
-  big: 'big-size-class',
-  small: 'small-size-class'
+withDefaults(defineProps<{
+  type?: keyof typeof EELButtonType
+  size?: keyof typeof EELButtonSize
+  disabled?: boolean
+}>(), {
+  type: 'green',
+  size: 'big',
+  disabled: false
 })
 
-const types = ref({
+const sizes = {
+  big: 'big-size-class',
+  small: 'small-size-class'
+}
+
+const types = {
   green: 'green-type-class',
   transparent: 'transparent-type-class',
   underscored: 'underscored-type-class'
-})
+}
 </script>
 
 <style lang="scss">

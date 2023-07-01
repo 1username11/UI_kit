@@ -14,10 +14,8 @@
     @apply border border-danger bg-white #{!important};
 }
 
-.is-error {
-    :first-child {
-        @apply text-danger;
-    }
+.el-form-item.is-error .el-form-item__label {
+    @apply text-danger #{!important};
 }
 
 .el-form-item__error {

@@ -23,6 +23,28 @@
     'input-bg-color': transparent,
     'input-border': 1px solid,
   ),
+
+  $input: (
+    'border-color': colors.$light-gray,
+    'text-color': colors.$input-text,
+    'placeholder-color': colors.$dark-green,
+  ),
+
+  $input-disabled:(
+    'fill': colors.$disabled !important,
+    'text-color': colors.$text-disabled,
+    'placeholder-color': colors.$text-disabled,
+  ),
+
+  $select: (
+    'input-color': colors.$dark-green,
+  ),
+
+  $select-option:(
+    'text-color': colors.$dark-green,
+    'selected-text-color': colors.$green,
+  )
+
 );
 
 

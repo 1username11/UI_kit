@@ -11,3 +11,14 @@ export enum EElComponentSize {
   default = 'default',
   large = 'large'
 }
+
+export enum EELButtonType {
+  green = 'green',
+  transparent = 'transparent',
+  underscored = 'underscored'
+}
+
+export enum EELButtonSize {
+  small = 'small',
+  big = 'big'
+}

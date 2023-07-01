@@ -11,19 +11,13 @@
         v-for="type in types"
         :key="type"
       >
-        <CustomButton :type="type" :size="'big'" :disabled="false">
-          <template #text>
-            {{ type }}
-          </template>
+        <CustomButton :type="type" :size="'big'">
+          {{ type }}
         </CustomButton>
       </div>
-      <CustomButton type="transparent" :size="'big'" :disabled="false">
-        <template #icon>
-          <IconGroup />
-        </template>
-        <template #text>
-          PDF
-        </template>
+      <CustomButton type="transparent" :size="'big'">
+        <IconGroup class="mr-2" />
+        <p>PDF</p>
       </CustomButton>
     </div>
 
@@ -32,19 +26,13 @@
         v-for="type in types"
         :key="type"
       >
-        <CustomButton :type="type" :size="'small'" :disabled="false">
-          <template #text>
-            {{ type }}
-          </template>
+        <CustomButton :type="type" :size="'small'">
+          {{ type }}
         </CustomButton>
       </div>
-      <CustomButton type="transparent" :size="'small'" :disabled="false">
-        <template #icon>
-          <IconGroup />
-        </template>
-        <template #text>
-          PDF
-        </template>
+      <CustomButton type="transparent" :size="'small'">
+        <IconGroup class="mr-2" />
+        <p>PDF</p>
       </CustomButton>
     </div>
   </div>
@@ -63,9 +51,9 @@
       label-width="auto"
       :label-position="'top'"
       :rules="inputRules"
-    >
+          >
       <el-form-item label="Activity name" prop="name">
-        <el-input v-model="inputForm.name" placeholder="Name" :disabled="false" />
+        <el-input v-model="inputForm.name" placeholder="Name"  />
       </el-form-item>
     </el-form>
   </div>

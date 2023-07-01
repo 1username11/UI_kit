@@ -17,6 +17,9 @@
   .el-input.is-disabled .el-input__wrapper{
     @apply shadow-none border-none bg-disabled text-textDisabled #{!important};
   }
+  .el-input .el-input__inner{
+    @apply capitalize font-manrope text-secondaryContent;
+  }
   .el-input__wrapper {
     @apply border border-lightGray shadow-none;
       &:hover{
@@ -27,6 +30,7 @@
   &:hover:not(.el-select--disabled) .el-input__wrapper{
     @apply border border-lightGray shadow-inputs;
   }
+
 
   .el-input__wrapper.is-focus{
     @apply border border-darkGreen bg-white shadow-none #{!important};
