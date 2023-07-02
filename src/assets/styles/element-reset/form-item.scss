@@ -1,0 +1,23 @@
+@use "element-plus/theme-chalk/src/form-item";
+
+.el-form-item.is-required:not(.is-no-asterisk).asterisk-left>.el-form-item__label:before,
+.el-form-item.is-required:not(.is-no-asterisk).asterisk-left>.el-form-item__label-wrap>.el-form-item__label:before {
+    @apply hidden;
+}
+
+.el-form--default.el-form--label-top .el-form-item .el-form-item__label {
+    @apply capitalize text-formLabel font-manrope text-darkGreen;
+}
+
+.el-form-item.is-error .el-input__wrapper {
+    @apply shadow-none;
+    @apply border border-danger bg-white #{!important};
+}
+
+.el-form-item.is-error .el-form-item__label {
+    @apply text-danger #{!important};
+}
+
+.el-form-item__error {
+    @apply mt-1;
+}

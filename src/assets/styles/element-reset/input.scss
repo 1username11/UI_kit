@@ -1,0 +1,31 @@
+@use "element-plus/theme-chalk/src/input";
+
+.el-input{
+  @apply transition-all w-77.5 h-10.5;
+  .el-input__wrapper {
+    @apply border shadow-none;
+      &:hover{
+        @apply bg-ghostWhite shadow-inputs transition-none;
+      }
+      ::placeholder{
+        @apply capitalize text-secondaryContent font-medium font-manrope #{!important};
+      }
+  }
+  .el-input__inner{
+    @apply capitalize font-manrope text-secondaryContent #{!important};
+
+  }
+  .el-input__wrapper.is-focus{
+    @apply border border-darkGreen;
+    @apply bg-white shadow-none #{!important};
+  }
+  &.is-disabled .el-input__wrapper{
+  @apply shadow-none border-none #{!important};
+  }
+}
+
+
+
+
+
+

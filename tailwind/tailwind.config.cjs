@@ -18,6 +18,10 @@ module.exports = {
     fontSize: {
       base: ['16px', '24px'],
       sm: ['14px', '24px'],
+      formLabel: ['12px', {
+        lineHeight: '18.5px',
+        fontWeight: '500'
+      }],
       section: ['32px', {
         lineHeight: '40px',
         fontWeight: '600'
@@ -64,7 +68,38 @@ module.exports = {
         100: '1'
       },
       boxShadow: {
-        'white-box': ' 0px 4px 14px 0px rgba(0, 0, 0, 0.15)'
+        'white-box': ' 0px 4px 14px 0px rgba(0, 0, 0, 0.15)',
+        'components-subsection': '1px 1px 15px 0px rgba(0, 0, 0, 0.15)',
+        inputs: '0px 12px 16px -16px rgba(15, 15, 15, 0.16)',
+        'button-hover-green': '0px 4px 8px 0px rgba(165, 207, 76, 0.5)',
+        'button-active': 'inset 0px 0px 3px 1px rgba(0, 0, 0, 0.4)',
+        'button-hover-transparent': '0px 4px 8px 0px rgba(0, 0, 0, 0.1)'
+      },
+      width: {
+        70: '280px',
+        77.5: '310px',
+        37.5: '150px',
+        28.5: '114px'
+      },
+      minWidth: {
+        37.5: '150px',
+        28.5: '114px'
+      },
+      height: {
+        22: '5.5rem',
+        2.75: '11px',
+        10.5: '42px',
+        8: '32px'
+      },
+      minHeight: {
+        10.5: '42px',
+        8: '32px'
+      },
+      borderRadius: {
+        '2.5xl': '20px'
+      },
+      colors: {
+        transparent: 'transparent'
       }
     }
   },

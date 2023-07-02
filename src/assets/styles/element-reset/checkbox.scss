@@ -1,0 +1,18 @@
+@use "element-plus/theme-chalk/src/checkbox";
+
+.el-checkbox {
+  &:hover {
+    .el-checkbox__inner {
+      @apply border border-lightGreen #{!important};
+    }
+  }
+
+}
+
+.el-checkbox__inner::after{
+  @apply bg-lightGreen w-1.5 h-2.75 top-[3px] left-[8px] bg-transparent #{!important};
+}
+
+.el-checkbox.el-checkbox--large .el-checkbox__inner {
+  @apply w-6 h-6;
+}

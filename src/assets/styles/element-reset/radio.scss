@@ -1,0 +1,29 @@
+@use "element-plus/theme-chalk/src/radio";
+
+.el-radio {
+  &:hover {
+    .el-radio__inner {
+      @apply border-lightGreen #{!important};
+    }
+  }
+
+}
+.el-radio__inner{
+  @apply border-darkGray #{!important};
+}
+
+.el-radio__label {
+  @apply text-black #{!important};
+}
+
+.el-radio__input.is-checked .el-radio__inner{
+  @apply border-lightGreen bg-transparent #{!important};
+}
+
+.el-radio__inner::after{
+  @apply bg-lightGreen w-2.5 h-2.5 #{!important};
+}
+
+.el-radio.el-radio--large .el-radio__inner{
+  @apply w-5 h-5;
+}

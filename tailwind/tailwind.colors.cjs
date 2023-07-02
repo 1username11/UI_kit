@@ -4,7 +4,12 @@ module.exports = {
   gray: colors.gray,
   red: colors.red,
   black: colors.black,
+  inputText: '#1C1D1F',
   dark: '#2A2E33',
+  ghostWhite: '#F5F5F6',
+  disabled: '#E0E0E0',
+  textDisabled: '#9E9E9E',
+  current: 'currentColor',
 
   darkGreen: '#024242',
   green: '#A5CF4C',

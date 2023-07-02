@@ -1,33 +1,68 @@
 @use "../variables/colors";
 
-@forward 'element-plus/theme-chalk/src/common/var.scss' with (
-  $colors: (
-    'primary': (
-      'base': colors.$primary, // todo: this MUST be a valid 6-digit HEX color in order to make it correctly work
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ($colors: ('primary': ('base': colors.$primary, // todo: this MUST be a valid 6-digit HEX color in order to make it correctly work
     ),
   ),
 
-  $menu:(
-    'bg-color': colors.$dark-green,
+  $menu: ('bg-color': colors.$dark-green,
     'text-color': colors.$white,
     'hover-bg-color': colors.$light-green,
     'active-color': colors.$green,
-  )  
+  ),
+
+  $checkbox: ('checked-bg-color': colors.$light-green,
+    'checked-icon-color': colors.$white,
+    'checked-text-color': colors.$black,
+    'text-color': colors.$black,
+    'checked-input-border-color': transparent,
+  ),
+
+  $radio: ('text-color': colors.$black,
+    'input-height': 20px,
+    'input-width': 20px,
+    'input-bg-color': transparent,
+    'input-border': 1px solid,
+  ),
+
+  $input: (
+    'border-color': colors.$light-gray,
+    'text-color': colors.$input-text,
+    'placeholder-color': colors.$dark-green,
+  ),
+
+  $input-disabled:(
+    'fill': colors.$disabled !important,
+    'text-color': colors.$text-disabled,
+    'placeholder-color': colors.$text-disabled,
+  ),
+
+  $select: (
+    'input-color': colors.$dark-green,
+  ),
+
+  $select-option:(
+    'text-color': colors.$dark-green,
+    'selected-text-color': colors.$green,
+  )
+
 );
+
 
 @use "element-plus/theme-chalk/src/base";
 @use "element-plus/theme-chalk/src/button";
 @use "element-plus/theme-chalk/src/badge";
 @use "element-plus/theme-chalk/src/message";
-@use "element-plus/theme-chalk/src/select";
-@use "element-plus/theme-chalk/src/input";
 @use "element-plus/theme-chalk/src/option";
 @use "element-plus/theme-chalk/src/popper";
 @use "element-plus/theme-chalk/src/loading";
 @use "element-plus/theme-chalk/src/form";
-@use "element-plus/theme-chalk/src/form-item";
 @use "element-plus/theme-chalk/src/card";
 @use "element-plus/theme-chalk/src/table";
 @use "element-plus/theme-chalk/src/switch";
 @use "element-plus/theme-chalk/src/menu";
-@use "element-plus/theme-chalk/src/radio";
+
+@use"./input";
+@use"./form-item";
+@use"./select";
+@use"./checkbox";
+@use"./radio";
