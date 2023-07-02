@@ -12,17 +12,17 @@
       <NavigationIcons :name="route.name" />
       <template #title>
         <div v-if="!isCollapse" :to="{ name: route.name }" class="capitalize ml-3">
-          {{ route.name }}
+          <p>{{ route.name }}</p>
         </div>
       </template>
     </el-menu-item>
 
     <el-menu-item @click="isCollapse=!isCollapse">
-      <IconArrowLeft v-if="isCollapse" />
+      <IconArrowRight v-if="isCollapse" />
 
       <template #title>
         <div class="flex items-center justify-end">
-          <IconArrowRight />
+          <IconArrowLeft />
 
           <p class="ml-3">Hide Menu</p>
         </div>
@@ -50,10 +50,3 @@ function navigateTo (routeName: string) {
 }
 
 </script>
-
-<style>
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  height: 100%;
-}
-</style>

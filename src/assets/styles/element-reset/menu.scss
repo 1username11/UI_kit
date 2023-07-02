@@ -1,0 +1,5 @@
+@use "element-plus/theme-chalk/src/menu";
+
+.el-menu-vertical-demo:not(.el-menu--collapse){
+  @apply h-auto min-w-[150px];
+}
