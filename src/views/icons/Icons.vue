@@ -42,7 +42,7 @@ import IconTime from '~icons/icon/time.svg'
 import IconVideo from '~icons/icon/video.svg'
 import IconWorkshops from '~icons/icon/workshops.svg'
 
-const iconsContent = ref([
+const iconsContent = [
   {
     title: 'Menu',
     icons: [IconDashboard, IconCommunity, IconWorkshops, IconCourses, IconBooks,
@@ -58,5 +58,5 @@ const iconsContent = ref([
     icons: [IconActivities, IconAgenda, IconArrowBack, IconDate, IconDone, IconDownload,
       IconFullScreen, IconInfo, IconLink, IconTime, IconVideo]
   }
-])
+]
 </script>

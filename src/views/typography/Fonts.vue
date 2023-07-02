@@ -1,9 +1,4 @@
 <template>
-  <div class="font-section text-dark mt-16 text-section">
-    <span>UI kit/ </span>
-    <span class="capitalize text-greenLight">{{ currentRoute }}</span>
-  </div>
-
   <div v-for="(contentItem) in content" :key="contentItem.title">
     <div class="flex justify-between mt-8">
       <div v-for="(subContent, idx) in contentItem.content" :key="idx">

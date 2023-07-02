@@ -1,7 +1,7 @@
 <template>
   <button
     :disabled="disabled"
-    class="transition duration-300 ease-in-out flex items-center justify-center"
+    class="transition duration-300 flex items-center justify-center"
     :class="[
       types[type],
       sizes[size]
@@ -12,15 +12,15 @@
 </template>
 
 <script lang="ts" setup>
-import type { EELButtonSize, EELButtonType } from '@/types/enums'
+import { EELButtonType, EELButtonSize } from '@/types/enums'
 
 withDefaults(defineProps<{
   type?: keyof typeof EELButtonType
   size?: keyof typeof EELButtonSize
   disabled?: boolean
 }>(), {
-  type: 'green',
-  size: 'big',
+  type: EELButtonType.green,
+  size: EELButtonSize.big,
   disabled: false
 })
 

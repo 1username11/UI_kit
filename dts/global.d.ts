@@ -1,7 +1,7 @@
 import 'vue-router'
 import { routeNames } from '@/router/route-names'
 import { globalProperties, portalNames } from '@/plugins'
-import { EELButtonType, EElComponentSize, EElComponentType } from '@/types/enums'
+import { EELButtonSize, EELButtonType, EElComponentSize, EElComponentType } from '@/types/enums'
 
 declare module 'vue-router' {
   interface RouteMeta {
@@ -22,7 +22,7 @@ declare module '@vue/runtime-core' {
     $elComponentSize: typeof EElComponentSize
     $elComponentType: typeof EElComponentType
     $elButtonType: typeof EELButtonType
-    $elButtonSize: typeof EElComponentSize
+    $elButtonSize: typeof EELButtonSize
   }
 }
 
